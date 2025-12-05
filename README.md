@@ -1,6 +1,5 @@
 
 
-````markdown
 # Mars-Style Category Analytics – Instacart (Python-Only)
 
 **Role this project targets:**  
