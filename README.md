@@ -329,8 +329,9 @@ Each notebook is written to be **demo-friendly**: samples and number of trees ar
 
 
 
+---
 
-# 🛒 Mars-Style Category Analytics (Python Only)
+# 🛒 REPORT Mars-Style Category Analytics (Python Only)
 
 ## ⭐ Executive Summary  
 Using the Instacart Online Grocery dataset as a proxy for the New Zealand grocery market, this project replicates the analytics workflow of a **Category Analytics Specialist at Mars** — fully in Python.
