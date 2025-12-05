@@ -330,7 +330,6 @@ Each notebook is written to be **demo-friendly**: samples and number of trees ar
 
 
 
-```markdown
 ## Executive Summary
 
 Using the Instacart Online Grocery dataset as a proxy for the New Zealand grocery market, I built a Python-only analytics project that mirrors the work of a Category Analytics Specialist at Mars.
@@ -379,5 +378,5 @@ For a company like Mars New Zealand, this analytics framework can be used to:
 - identify high-value, loyal customers and products,
 - support targeted promotions and cross-sell strategies,
 - and provide a foundation for more advanced AI use cases (e.g., personalised offers or dynamic assortment optimisation).
-````
+
 
