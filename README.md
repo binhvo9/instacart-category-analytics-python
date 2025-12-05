@@ -330,53 +330,98 @@ Each notebook is written to be **demo-friendly**: samples and number of trees ar
 
 
 
-## Executive Summary
+# 🛒 Mars-Style Category Analytics (Python Only)
 
-Using the Instacart Online Grocery dataset as a proxy for the New Zealand grocery market, I built a Python-only analytics project that mirrors the work of a Category Analytics Specialist at Mars.
+## ⭐ Executive Summary  
+Using the Instacart Online Grocery dataset as a proxy for the New Zealand grocery market, this project replicates the analytics workflow of a **Category Analytics Specialist at Mars** — fully in Python.
 
-I constructed a full category data model (fact + dimensions), mapped products into three Mars-style business segments (Snacking, Pet, Food), engineered behavioural KPIs (penetration, daypart, loyalty) and trained a reorder prediction model with ROC–AUC ≈ 0.89–0.90. I also clustered customers into distinct shopper types and explored cross-sell opportunities via association rules.
+I built:  
+- a complete **category data model** (fact + dimensions),  
+- Mars-style **business segments** (Snacking, Pet, Food),  
+- behavioural **shopper KPIs** (penetration, loyalty, daypart patterns),  
+- association rules for **cross-sell discovery**,  
+- and a **reorder prediction model** achieving **ROC–AUC ≈ 0.89–0.90**.
 
-The result is a reusable analytics blueprint that could be implemented with Power BI or Tableau in a Mars context to support category reviews, Perfect Store work, and customer activation.
+The result is a reusable analytics blueprint that could be implemented in **Power BI / Tableau / Databricks** for category reviews, Perfect Store work, and customer activation.
 
-## Key Insights (numbers illustrative)
+---
 
-- **Category size & reach**
-  - Food accounts for ~X% of units sold and appears in ~Y% of baskets – the “everyday core”.
-  - Snacking contributes ~A% of units and appears in ~B% of baskets, with strong afternoon/evening peaks.
-  - Pet represents only ~C% of units but shows the highest reorder and loyalty rates.
+## 📊 Key Insights (illustrative numbers)
 
-- **Shopper behaviour**
-  - Food purchases are spread across the day, with clear lunchtime and early-evening peaks.
-  - Snacking peaks between around 14:00–17:00, consistent with “afternoon treat / top-up” missions.
-  - Pet purchases are more evenly distributed, supporting the idea of planned, routine pet care missions.
+### **🔹 Category Size & Reach**
+- **Food** = everyday core: appears in ~Y% of baskets.  
+- **Snacking** = strong afternoon/evening peaks (~14:00–17:00).  
+- **Pet** = smaller share but **highest loyalty / repeat**.
 
-- **Reorder dynamics (ML model)**
-  - A Gradient Boosting model trained on a 3% sample reaches **ROC–AUC ≈ 0.90**, using only behavioural features.
-  - The strongest drivers of reorder probability are:
-    - how many times a customer has previously bought the product,
-    - the product’s historical reorder rate,
-    - the customer’s overall reorder tendencies.
-  - Segment-specific models show Pet as the most predictable segment (highest AUC), reinforcing its role as a loyal, routine category.
+### **🔹 Shopper Behaviour**
+- Food = spread across day, lunch & early evening peaks.  
+- Snacking = classic “afternoon treat / top-up” mission.  
+- Pet = routine, planned shopping missions.
 
-- **Customer segments**
-  - KMeans clustering reveals distinct shopper types such as:
-    - heavy family stockers with large, highly repetitive baskets,
-    - snack-focused top-up shoppers,
-    - occasional browsers with low loyalty,
-    - pet-driven loyalists.
-  - These segments suggest different activation levers (e.g., pet loyalty rewards vs. snacking impulse promotions).
+### **🔹 Reorder Dynamics (ML Model)**
+A Gradient Boosting model (3% sample):  
+- **ROC–AUC ≈ 0.90**  
+- Top drivers:
+  - user’s historical reorder rate,  
+  - product’s reorder rate,  
+  - number of past purchases of the product.  
 
-- **Cross-sell opportunities**
-  - Association rules on a 1% order sample highlight product combinations with high lift, pointing to potential cross-category bundles and in-store/online “Buy Together” recommendations.
+Pet segment models show the **highest predictability**, reinforcing planned, routine pet care missions.
 
-## Business Value
+### **🔹 Customer Segments (KMeans)**
+Identified clear shopper archetypes:  
+- **Family Stockers** – large, repetitive baskets  
+- **Snack Top-Up Shoppers** – small, frequent, impulsive  
+- **Occasional Browsers** – low loyalty  
+- **Pet Loyalists** – predictable, high-repeat  
 
-For a company like Mars New Zealand, this analytics framework can be used to:
+Each segment suggests targeted activation (e.g., **pet loyalty rewards** vs **snacking impulse bundles**).
 
-- size and prioritise segments (Snacking, Pet, Food) by volume and reach,
-- understand when and how shoppers buy each segment,
-- identify high-value, loyal customers and products,
-- support targeted promotions and cross-sell strategies,
-- and provide a foundation for more advanced AI use cases (e.g., personalised offers or dynamic assortment optimisation).
+### **🔹 Cross-Sell Opportunities**
+Association rules (1% sample) surface high-lift combinations, ideal for:  
+- “Frequently Bought Together”  
+- cross-category bundles  
+- shelf adjacency / online recommendations  
 
+---
+
+## 🚀 Business Value for Mars NZ
+
+This Python analytics framework enables Mars teams to:
+
+- size and prioritise **Snacking, Pet, Food** segments,  
+- understand when and how shoppers buy each segment,  
+- identify high-value customers and high-loyalty products,  
+- design data-driven promotions & cross-sell strategies,  
+- build a foundation for **AI-driven personalised offers** and dynamic assortment optimisation.
+
+---
+
+## 🧱 Project Components  
+- `notebooks/` — EDA, feature engineering, ML pipelines  
+- `src/` — reusable Python modules  
+- `data_raw/` — ignored (not in repo)  
+- `data_processed/` — ignored (not in repo)  
+- `reports/` — charts & summaries  
+- `README.md` — project overview  
+
+---
+
+## 🧰 Tech Stack
+
+| Area | Tools |
+|------|-------|
+| Data | pandas, numpy |
+| Viz | matplotlib, seaborn |
+| ML | scikit-learn, GradientBoosting, KMeans |
+| Patterns | association rules (mlxtend) |
+
+---
+
+## 📎 Notes  
+- Dataset: Instacart Online Grocery (open source)  
+- All data is processed locally → no raw data uploaded to GitHub  
+- Project follows best practices for DA portfolios  
+
+---
 
