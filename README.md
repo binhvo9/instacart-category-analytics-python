@@ -111,6 +111,7 @@ All KPIs calculated in `01_data_modeling_and_segmentation.ipynb`.
 * Aggregate `line_qty` by `segment`.
 * Visualise as a bar chart.
 ![alt text](image.png)
+<img width="590" height="390" alt="image" src="https://github.com/user-attachments/assets/0db61e28-733a-4340-a1a8-6b97c8a6fd6a" />
 
 **Insight (example):**
 
@@ -125,6 +126,9 @@ For each `order_id`:
 * Flag whether it contains Snacking / Pet / Food.
 * **Basket penetration (%)** = % of orders where segment is present.
 ![alt text](image-3.png)
+<img width="590" height="390" alt="image-3" src="https://github.com/user-attachments/assets/cc708050-2180-449e-8965-20fd1803dc65" />
+
+
 **Example pattern (your numbers may vary slightly):**
 
 * Food: ~90% of baskets
@@ -137,6 +141,7 @@ This mirrors real-world behaviour: food is essential, snacking is high-frequency
 
 Group by `order_hour_of_day` × `segment`, sum `line_qty` → line chart.
 ![alt text](image-1.png)
+<img width="790" height="490" alt="image-1" src="https://github.com/user-attachments/assets/730d8e15-6e4f-4a86-8169-fe2c64c40ae1" />
 
 **Behavioural pattern:**
 
@@ -151,6 +156,7 @@ This is the kind of daypart view used in activation & media planning.
 * **Reorder rate per segment**: mean of `reordered` per `segment`.
 * **Customer-level loyalty**: for each user × segment, how many times segment was bought; “loyal” if ≥2 purchases.
 ![alt text](image-2.png)
+<img width="590" height="390" alt="image-2" src="https://github.com/user-attachments/assets/aa6fcb2c-63ce-4638-9304-c87c5c01c220" />
 
 Typical result:
 
@@ -225,6 +231,7 @@ N_ESTIMATORS_GB = 50
 
 Using `sklearn.calibration.calibration_curve` to compare predicted probs vs actual reorder rate:
 ![alt text](image-4.png)
+<img width="490" height="490" alt="image-4" src="https://github.com/user-attachments/assets/4b94efaa-a5bc-45c1-ad6e-da79325b801a" />
 
 * Gradient Boosting probabilities are reasonably well calibrated for decision-making in bands (e.g., low / medium / high likelihood).
 
