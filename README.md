@@ -2,6 +2,8 @@
 
 # Mars-Style Category Analytics – Instacart (Python-Only)
 
+![Demo](assets/demo.png)
+
 **Role this project targets:**  
 _Analytics Specialist / Category Analytics Specialist – FMCG (e.g. Mars New Zealand)._
 
